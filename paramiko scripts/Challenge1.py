@@ -19,7 +19,7 @@ username = input('Username: ')
 password = getpass.getpass('Password: ')
 today = date.today()
 
-max_buffer = 10000
+max_buffer = 65535
 
 def clear_buffer(connection):
     if connection.recv_ready():
@@ -33,7 +33,7 @@ for device in devices.keys():
     print(f'Connecting to {devices[device]["ip"]}')
     connection.connect(devices[device]['ip'], username=username, password=password, look_for_keys=False, allow_agent=False)
     new_connection = connection.invoke_shell()
-    # output = clear_buffer(new_connection)
+    output = clear_buffer(new_connection)
     time.sleep(2)
     new_connection.send('terminal length 0\n')
     output = clear_buffer(new_connection)
