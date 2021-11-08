@@ -1,0 +1,2 @@
+show users
+show ip interface brief
