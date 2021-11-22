@@ -1,2 +1,5 @@
-show users
-show ip interface brief
+enable
+Aaron240
+show ip int brief
+show vtp status
+show vlan brie

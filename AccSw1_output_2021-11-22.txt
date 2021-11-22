@@ -1,0 +1,70 @@
+terminal length 0
+AccSw1>enable
+Password: 
+Password: 
+AccSw1#
+AccSw1#show ip int brief
+Interface              IP-Address      OK? Method Status                Protocol
+GigabitEthernet0/0     unassigned      YES unset  up                    up      
+GigabitEthernet0/1     unassigned      YES unset  up                    up      
+GigabitEthernet0/2     unassigned      YES unset  down                  down    
+GigabitEthernet0/3     unassigned      YES unset  down                  down    
+GigabitEthernet1/0     unassigned      YES unset  up                    up      
+GigabitEthernet1/1     unassigned      YES unset  down                  down    
+GigabitEthernet1/2     unassigned      YES unset  down                  down    
+GigabitEthernet1/3     unassigned      YES unset  down                  down    
+GigabitEthernet2/0     unassigned      YES unset  down                  down    
+GigabitEthernet2/1     unassigned      YES unset  down                  down    
+GigabitEthernet2/2     unassigned      YES unset  down                  down    
+GigabitEthernet2/3     unassigned      YES unset  down                  down    
+GigabitEthernet3/0     unassigned      YES unset  down                  down    
+GigabitEthernet3/1     unassigned      YES unset  down                  down    
+GigabitEthernet3/2     unassigned      YES unset  down                  down    
+GigabitEthernet3/3     unassigned      YES unset  down                  down    
+Vlan101                192.168.122.21  YES NVRAM  up                    up      
+AccSw1#
+AccSw1#show vtp status
+VTP Version capable             : 1 to 3
+VTP version running             : 3
+VTP Domain Name                 : aaronnobles
+VTP Pruning Mode                : Disabled
+VTP Traps Generation            : Disabled
+Device ID                       : 0cdd.cea9.0000
+
+Feature VLAN:
+--------------
+VTP Operating Mode                : Client
+Number of existing VLANs          : 6
+Number of existing extended VLANs : 0
+Maximum VLANs supported locally   : 4096
+Configuration Revision            : 5
+Primary ID                        : 0cec.cfe0.0000
+Primary Description               : CoreSw1
+MD5 digest                        : 0xAD 0x56 0x9F 0x96 0xD4 0xD4 0xFD 0x54 
+                                    0x2A 0xC9 0x24 0x25 0x7C 0x54 0xCE 0x66 
+
+
+Feature MST:
+--------------
+VTP Operating Mode                : Transparent
+
+
+Feature UNKNOWN:
+--------------
+VTP Operating Mode                : Transparent
+
+AccSw1#
+AccSw1#show vlan brie
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Gi0/2, Gi0/3, Gi1/1, Gi1/2
+                                                Gi1/3, Gi2/0, Gi2/1, Gi2/2
+                                                Gi2/3, Gi3/0, Gi3/1, Gi3/2
+                                                Gi3/3
+101  MGMT                             active    Gi1/0
+1002 fddi-default                     act/unsup 
+1003 trcrf-default                    act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trbrf-default                    act/unsup 
+AccSw1#

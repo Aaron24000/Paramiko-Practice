@@ -4,7 +4,7 @@ Create a Python script that connects to a Cisco Router using SSH and Paramiko. T
 Print out the output of the command.
 '''
 
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import paramiko, getpass, time, json
 from datetime import date
